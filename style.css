@@ -1,0 +1,12 @@
+
+:root {
+ --neon-pink:#ff2d75;
+ --neon-purple:#b14fff;
+ --dark:#06060c;
+ --panel:rgba(6,6,12,0.9);
+}
+body{margin:0;font-family:Arial;background:var(--dark);color:#f2e6ff;transition:background .7s}
+h1{color:var(--neon-pink);text-shadow:0 0 10px var(--neon-pink)}
+.nav button{margin:4px;background:#0a0a14;border:1px solid var(--neon-purple);color:white;padding:8px 14px}
+.card{background:var(--panel);margin:12px;padding:12px;border:1px solid var(--neon-pink)}
+.radio-panel{position:fixed;bottom:20px;right:20px}

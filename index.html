@@ -1,89 +1,35 @@
 
 <!DOCTYPE html>
-<html lang="ru">
+<html>
 <head>
-<meta charset="utf-8"/>
-<title>NIGHT CITY ARCHIVE – ToshaS7</title>
-<style>
-body{background:#000;color:#6ee7ff;font-family:Arial;margin:0}
-header,main,footer{max-width:1000px;margin:auto;padding:16px}
-.card{background:#0b111a;border:1px solid #134e5e;border-radius:16px;padding:12px;margin-bottom:12px}
-.nav button{margin:4px;padding:8px 12px;border-radius:12px;background:#0f172a;color:#6ee7ff;border:1px solid #134e5e}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-@media(min-width:800px){.grid{grid-template-columns:1fr 1fr 1fr 1fr}}
-img{width:100%;height:120px;object-fit:cover;border-radius:12px;border:1px solid #134e5e}
-.hidden{display:none}
-</style>
+<meta charset='utf-8'/>
+<link rel='stylesheet' href='style.css'/>
 </head>
+<body onload="setBackground('home')">
 
-<body>
 <header>
 <h1>NIGHT CITY ARCHIVE</h1>
-<p>Фан‑энциклопедия Cyberpunk 2077 • ToshaS7</p>
+<p>Уличный гайд • ToshaS7</p>
 </header>
 
-<main>
-<div class="nav">
-<button onclick="show('home')">Главная</button>
-<button onclick="show('facts')">Факты</button>
-<button onclick="show('secrets')">Секреты</button>
-<button onclick="show('implants')">Импланты</button>
-<button onclick="show('gallery')">Галерея</button>
+<div class='nav'>
+<button onclick="setBackground('home')">Главная</button>
+<button onclick="setBackground('facts')">Факты</button>
+<button onclick="setBackground('secrets')">Секреты</button>
+<button onclick="setBackground('implants')">Импланты</button>
+<button onclick="setBackground('gallery')">Галерея</button>
 </div>
 
-<div id="home" class="card page">
-<h2>Автор: ToshaS7</h2>
-<p>Энциклопедия Найт‑Сити: факты, механики и визуальная культура Cyberpunk 2077.</p>
+<div class='card'>Чистый вайб улиц Найт-Сити без корпоратского фуфла.</div>
+
+<div class='radio-panel'>
+<button onclick='toggleMusic()' id='musicBtn'>🔊 Lizzy Radio</button>
 </div>
 
-<div id="facts" class="card page hidden">
-<h2>Интересные факты</h2>
-<p>• Погода влияет на поведение NPC.</p>
-<p>• Некоторые лифты запускают скрытые диалоги.</p>
-<p>• В городе десятки отсылок к фильмам 80‑х.</p>
-</div>
+<audio id='bgm' loop>
+<source src='music/lizzy_style.mp3' type='audio/mpeg'>
+</audio>
 
-<div id="secrets" class="card page hidden">
-<h2>Секреты</h2>
-<p>• Скрытая квартира Ви открывается после цепочки звонков.</p>
-<p>• Легендарный имплант можно получить без боя.</p>
-<p>• Ночные клубы меняют треки по времени суток.</p>
-</div>
-
-<div id="implants" class="card page hidden">
-<h2>Энциклопедия имплантов</h2>
-<p>• Операционные системы: Сандевистан, Берсерк, Кибердека.</p>
-<p>• Руки: клинки богомола, руки‑гориллы, моноструна.</p>
-<p>• Нервная система: ускорение восприятия.</p>
-<p>• Скелет: усиление каркаса.</p>
-<p>• Кожа: броня и теплоотвод.</p>
-
-<h3>Сандевистан: архитектура ускорения</h3>
-<p>Класс ОС, разгоняющих нейронные импульсы и создающих эффект замедления мира.</p>
-<p>Поколения: ранние / военные / корпоративные.</p>
-<p>Синергии: рывки, клинки богомола, точное оружие.</p>
-</div>
-
-<div id="gallery" class="card page hidden">
-<h2>Галерея</h2>
-<div class="grid">
-<img src="https://images.unsplash.com/photo-1608889175157-718b6205a50d?w=800"/>
-<img src="https://images.unsplash.com/photo-1611605698335-8b1569810432?w=800"/>
-<img src="https://images.unsplash.com/photo-1611095564985-89765398121e?w=800"/>
-<img src="https://images.unsplash.com/photo-1603570416072-84068a0f135e?w=800"/>
-</div>
-</div>
-
-</main>
-
-<footer>2077 • Night City • ToshaS7</footer>
-
-<script>
-function show(id){
- document.querySelectorAll('.page').forEach(e=>e.classList.add('hidden'));
- document.getElementById(id).classList.remove('hidden');
-}
-</script>
-
+<script src='script.js'></script>
 </body>
 </html>
