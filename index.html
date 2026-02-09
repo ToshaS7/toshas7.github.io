@@ -1,35 +1,38 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
-<meta charset='utf-8'/>
-<link rel='stylesheet' href='style.css'/>
+<meta charset="utf-8"/>
+<title>NIGHT CITY ARCHIVE</title>
+<style>
+body{background:#06000a;color:#ff00ea;font-family:Arial;margin:0;background-image:url('img/bg.jpg');background-size:cover;background-attachment:fixed;}
+header{text-align:center;padding:20px}
+button{margin:4px;padding:10px;background:#140010;color:#ff00ea;border:1px solid #ff00ea;border-radius:12px;}
+.card{margin:10px;padding:15px;border:1px solid #ff00ea;background:#0c000aee;border-radius:16px;}
+.gallery img{width:220px;margin:5px;border:1px solid #ff00ea;border-radius:12px;}
+</style>
 </head>
-<body onload="setBackground('home')">
-
+<body>
 <header>
 <h1>NIGHT CITY ARCHIVE</h1>
-<p>Уличный гайд • ToshaS7</p>
+<p>Автор: ToshaS7</p>
 </header>
 
-<div class='nav'>
-<button onclick="setBackground('home')">Главная</button>
-<button onclick="setBackground('facts')">Факты</button>
-<button onclick="setBackground('secrets')">Секреты</button>
-<button onclick="setBackground('implants')">Импланты</button>
-<button onclick="setBackground('gallery')">Галерея</button>
-</div>
-
-<div class='card'>Чистый вайб улиц Найт-Сити без корпоратского фуфла.</div>
-
-<div class='radio-panel'>
-<button onclick='toggleMusic()' id='musicBtn'>🔊 Lizzy Radio</button>
-</div>
-
-<audio id='bgm' loop>
-<source src='music/lizzy_style.mp3' type='audio/mpeg'>
+<audio id="radio" loop>
+  <source src="music/lizzy.mp3" type="audio/mpeg">
 </audio>
 
-<script src='script.js'></script>
-</body>
-</html>
+<button onclick="let a=document.getElementById('radio'); a.paused?a.play():a.pause()">Вкл / Выкл радио Lizzy Wizzy</button>
+
+<div class="card">
+<h2>Энциклопедия имплантов</h2>
+<p>Уличный гайд по хрому Найт-Сити: сандевистан, берсерк, кибердеки и всё что превращает чумбу в легенду.</p>
+</div>
+
+<div class="card gallery">
+<h2>Галерея</h2>
+<img src="img/1.jpg"/>
+<img src="img/2.jpg"/>
+<img src="img/3.jpg"/>
+</div>
+
+</body></html>
